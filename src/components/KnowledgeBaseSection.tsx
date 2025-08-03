@@ -91,31 +91,32 @@ const KnowledgeBaseSection = () => {
   ];
 
   return (
-    <div className="container py-16">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-foreground mb-4">Knowledge Base</h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Comprehensive guides and tutorials to help you master every feature of Accura POS
-        </p>
-      </div>
+    <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+      <div className="container">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-foreground mb-6">Knowledge Base</h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Comprehensive guides and tutorials to help you master every feature of Accura POS
+          </p>
+        </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {categories.map((category) => {
-          const Icon = category.icon;
-          return (
-            <Card 
-              key={category.title} 
-              className="group hover:shadow-lg transition-all duration-300 cursor-pointer border-border/50"
-            >
-              <CardHeader className="pb-3">
-                <div className="flex items-center justify-between mb-2">
-                  <div className={`${category.bgColor} ${category.color} p-2 rounded-lg`}>
-                    <Icon className="w-5 h-5" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {categories.map((category) => {
+            const Icon = category.icon;
+            return (
+              <Card 
+                key={category.title} 
+                className="group hover:shadow-xl transition-all duration-300 cursor-pointer border-0 shadow-lg bg-card hover:-translate-y-1"
+              >
+                <CardHeader className="pb-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className={`${category.bgColor} ${category.color} p-3 rounded-xl`}>
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <Badge variant="secondary" className="text-sm px-3 py-1 rounded-full">
+                      {category.articles}
+                    </Badge>
                   </div>
-                  <Badge variant="secondary" className="text-xs">
-                    {category.articles} articles
-                  </Badge>
-                </div>
                 <CardTitle className="text-base group-hover:text-primary transition-colors">
                   {category.title}
                 </CardTitle>
@@ -142,8 +143,9 @@ const KnowledgeBaseSection = () => {
                 </div>
               </CardContent>
             </Card>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

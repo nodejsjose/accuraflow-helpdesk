@@ -36,8 +36,8 @@ const QuickActions = () => {
       description: "Explore our comprehensive knowledge base",
       icon: FileText,
       href: "/knowledge-base",
-      color: "text-success",
-      bgColor: "bg-success/10"
+      color: "text-green-600",
+      bgColor: "bg-green-50"
     }
   ];
 
@@ -51,29 +51,27 @@ const QuickActions = () => {
   ];
 
   return (
-    <div className="container py-12">
+    <div className="container py-16">
       {/* Main Actions */}
-      <div className="grid md:grid-cols-3 gap-6 mb-16">
+      <div className="grid md:grid-cols-3 gap-8 mb-20">
         {actions.map((action) => {
           const Icon = action.icon;
           return (
-            <Card key={action.title} className="group hover:shadow-lg transition-all duration-300 border-border/50">
-              <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className={`${action.bgColor} ${action.color} p-3 rounded-lg`}>
-                    <Icon className="w-6 h-6" />
+            <Card key={action.title} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg bg-card">
+              <CardContent className="p-8">
+                <div className="text-center">
+                  <div className={`${action.bgColor} ${action.color} p-4 rounded-2xl inline-flex mb-6`}>
+                    <Icon className="w-8 h-8" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {action.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      {action.description}
-                    </p>
-                    <Button asChild variant="outline" size="sm">
-                      <Link to={action.href}>Get Started</Link>
-                    </Button>
-                  </div>
+                  <h3 className="font-bold text-xl text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {action.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {action.description}
+                  </p>
+                  <Button asChild className="w-full rounded-xl" size="lg">
+                    <Link to={action.href}>Get Started</Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
