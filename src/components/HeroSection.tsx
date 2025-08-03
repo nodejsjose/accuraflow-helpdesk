@@ -4,8 +4,8 @@ import { Search, ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-50 border-b border-border">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+    <div className="relative overflow-hidden bg-gradient-to-br from-blue-50/50 to-cyan-50/30 border-b border-border">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/3 via-transparent to-accent/3"></div>
       <div className="container py-20 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-6">

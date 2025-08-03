@@ -91,7 +91,7 @@ const KnowledgeBaseSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-blue-50 py-20">
+    <div className="bg-muted/30 py-20">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-6">Knowledge Base</h2>
